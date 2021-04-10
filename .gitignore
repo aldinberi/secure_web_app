@@ -1,0 +1,10 @@
+rest/vendor/
+rest/.vscode/
+rest/.idea/
+rest/composer.lock
+rest/logs/*
+rest/config/config.php
+rest/tests/build/
+rest/.phpunit.result.cache
+rest/!.htaccess
+vendor

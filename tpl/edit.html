@@ -1,0 +1,124 @@
+<div id="user_info" class="m-portlet">
+	<div class="m-portlet__head">
+		<div class="m-portlet__head-caption">
+			<div class="m-portlet__head-title">
+				<span class="m-portlet__head-icon m--hide">
+					<i class="la la-gear"></i>
+				</span>
+				<h3 class="m-portlet__head-text">
+					Profile
+				</h3>
+			</div>
+		</div>
+	</div>
+
+	<!--begin::Form-->
+	<form id="update_user_form" class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
+		<div class="m-portlet__body">
+			<div class="form-group m-form__group row">
+				<div class="col-lg-6">
+					<label>Full Name:</label>
+					<div class="m-input-icon m-input-icon--right">
+						<input type="text" name="name" class="form-control m-input" placeholder="Enter full name" />
+						<span class="m-input-icon__icon m-input-icon__icon--right"
+							><span><i class="la la-user"></i></span
+						></span>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<label class="">Email:</label>
+					<div class="m-input-icon m-input-icon--right">
+						<input type="text" name="email" class="form-control m-input" placeholder="Enter email" />
+						<span class="m-input-icon__icon m-input-icon__icon--right"
+							><span><i class="la la-send"></i></span
+						></span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group m-form__group row">
+				<div class="col-lg-6">
+					<label>Phone:</label>
+					<div class="m-input-icon m-input-icon--right">
+						<input type="text" name="phone" class="form-control m-input" placeholder="Enter phone" />
+						<span class="m-input-icon__icon m-input-icon__icon--right"
+							><span><i class="la la-phone"></i></span
+						></span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group m-form__group row">
+				<div class="col-lg-6">
+					<label style="color: black;">Verification:</label>
+					<div class="m-radio-inline">
+						<label class="m-radio m-radio--solid m-radio--brand">
+							<input type="radio" name="verification" value="sms_verify" /> Sms verification <span></span
+						></label>
+						<label class="m-radio m-radio--solid m-radio--brand">
+							<input type="radio" name="verification" value="otp_verify" /> Otp verification
+							<span></span>
+						</label>
+						<label class="m-radio m-radio--solid m-radio--brand">
+							<input type="radio" name="verification" value="none" /> None
+							<span></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group m-form__group row">
+				<div class="col-lg-6">
+					<div class="m-checkbox-list">
+						<label class="m-checkbox">
+							Remember me<input id="remember" type="checkbox" value="0" name="remember" />
+							<span></span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+			<div class="m-form__actions m-form__actions--solid">
+				<div class="row">
+					<div class="col-sm">
+						<button
+							type="button"
+							class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air"
+							data-toggle="modal"
+							data-remote="remote_modals/change_password_modal.html"
+							data-target="#edit_small_modal"
+						>
+							Change password
+						</button>
+					</div>
+					<div class="col-sm m--align-right">
+						<button
+							type="submit"
+							class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air"
+							onclick="EditProfile.update_user()"
+						>
+							Update
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div id="edit_small_modal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title"></h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="m-loader m-loader--info m-loader--lg"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function () {
+		EditProfile.init();
+	});
+</script>

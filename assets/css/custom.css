@@ -1,0 +1,95 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+h3,
+h4,
+p,
+a,
+address,
+img,
+s,
+var,
+i,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+thead,
+tr,
+th,
+details,
+header,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+details,
+header,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	line-height: 1.5;
+	font-family: sans-serif;
+	font-weight: normal;
+	color: rgba(0, 0, 0, 0.87);
+}
+body {
+	margin: 0;
+}
+
+nav {
+	height: 50px;
+	line-height: 50px;
+	background: #00acc1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+nav ul li {
+	display: block;
+	float: left;
+	width: 33.33%;
+	text-align: center;
+}
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main#spapp > section {
+	padding: 60px 10px 10px 10px;
+	background: #ffcdd2;
+}
+main#spapp > section#error_404 {
+	background: #b71c1c;
+	color: #fff;
+}

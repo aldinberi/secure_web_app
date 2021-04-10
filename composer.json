@@ -1,0 +1,18 @@
+{
+	"name": "sssd/project",
+	"description": "SSSD project made as part of the course",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Aldin Beriša",
+			"email": "aldin.berisa@ibu.edu.ba"
+		}
+	],
+	"scripts": {
+		"post-install-cmd": "cd rest;composer install;composer update"
+	},
+	"require": {
+		"ext-mbstring": "^7.2"
+	}
+}
