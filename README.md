@@ -81,9 +81,11 @@ The API for sending a password recovery mail is located at the route `/users/rec
 
 The API for sending a password recovery mail is located at the route `/users/password-recover/{id}` which uses the PUT method. One requirement to be able to update the password is for the request to have in the header the JWT token which was part of the URL when the user clicked the recovery link. The password is again being checked if it has been breached before.
 
-#### Additional feature
+#### Additional features
 
-All the information provided to the APIs is being validated, sanitized, and filtered. PHP PDO is being used as well to prevent SQL injections.
+- All the information provided to the APIs is being validated, sanitized, and filtered.
+- PHP PDO is being used as well to prevent SQL injections.
+- Logging of all requests is being done using `tribeos/http-logger` and saved in `rest/logs/debug.log`. The information saved includes which route was accessed, the contents of body, params, and query parameters as well as device information.
 
 ## Possible improvments
 
