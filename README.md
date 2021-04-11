@@ -85,6 +85,7 @@ The API for sending a password recovery mail is located at the route `/users/pas
 
 - All the information provided to the APIs is being validated, sanitized, and filtered.
 - PHP PDO is being used as well to prevent SQL injections.
+- OpenAPI specification has been added. It presents in a clear way using generated frontend all the available APIs including all the relevant information about them as well as the possibility to test them.
 - Logging of all requests is being done using `tribeos/http-logger` and saved in `rest/logs/debug.log`. The information saved includes which route was accessed, the contents of body, params, and query parameters as well as device information.
 
 ## Possible improvments
